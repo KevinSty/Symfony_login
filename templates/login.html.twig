@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <h1>Login</h1>
+    {% if error %}
+        Wrong password or username
+    {% endif %}
+
+    <form action="{{ path('login') }}" method="post">
+        <label for="username">username</label>
+        <input type=text" id="username" name="_username" value="{{ last-username }}" />
+
+        <label for="username">username</label>
+        <input type="text" id="password" name="_password" />
+
+        <button type="submit">login</button>
+
+    </form>
+
+{% endblock %}
